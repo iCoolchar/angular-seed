@@ -39,4 +39,19 @@ describe('my app', function() {
     });
 
   });
+
+  describe('http_demo', function() {
+
+    beforeEach(function() {
+      browser.get('index.html#/http_demo');
+    });
+
+
+    it('should render http_demo when user navigates to /http_demo', function() {
+        expect(element.all(by.css('[ng-view] p')).first().getText()).
+        toMatch(/partial for http demo/);
+    });
+
+  });
+
 });
