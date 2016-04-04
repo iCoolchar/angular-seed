@@ -54,4 +54,18 @@ describe('my app', function() {
 
   });
 
+  describe('tab_demo', function() {
+
+    beforeEach(function() {
+      browser.get('index.html#/tab_demo');
+    });
+
+
+    it('should render http_demo when user navigates to /tab_demo', function() {
+      expect(element.all(by.css('[ng-view] p')).first().getText()).
+      toMatch(/partial for tab demo/);
+    });
+
+  });
+
 });
