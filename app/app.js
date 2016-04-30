@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'ngNotify',
+  'ui.bootstrap',
   'myApp.view1',
   'myApp.view2',
   'myApp.http_demo',

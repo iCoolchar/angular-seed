@@ -52,6 +52,78 @@ angular.module('myApp.http_demo', ['ngRoute','ngNotify'])
         {
             "name": "item5",
             "number": "value5"
+        },
+        {
+            "name": "item5",
+            "number": "value1"
+        },
+        {
+            "name": "item7",
+            "number": "value2"
+        },
+        {
+            "name": "item8",
+            "number": "value3"
+        },
+        {
+            "name": "item9",
+            "number": "value4"
+        },
+        {
+            "name": "item10",
+            "number": "value5"
+        },
+        {
+            "name": "item11",
+            "number": "value1"
+        },
+        {
+            "name": "item12",
+            "number": "value2"
+        },
+        {
+            "name": "item13",
+            "number": "value3"
+        },
+        {
+            "name": "item4",
+            "number": "value4"
+        },
+        {
+            "name": "item5",
+            "number": "value5"
+        },
+        {
+            "name": "item1",
+            "number": "value1"
+        },
+        {
+            "name": "item2",
+            "number": "value2"
+        },
+        {
+            "name": "item3",
+            "number": "value3"
+        },
+        {
+            "name": "item4",
+            "number": "value4"
+        },
+        {
+            "name": "item5",
+            "number": "value5"
         }
     ];
+
+    $scope.filteredMockList = [];
+    $scope.totalItems = $scope.mockList.length;
+    $scope.currentPage = 1;
+    $scope.numPerPage = 10;
+    $scope.maxSize = 5;
+    $scope.$watch("currentPage + numPerPage", function() {
+        var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+            , end = begin + $scope.numPerPage;
+
+        $scope.filteredMockList = $scope.mockList.slice(begin, end);
+    });
 });

@@ -10,6 +10,7 @@
     <div class="container-fluid" id="tableContainer">
         <div class="row">
             <div class="col-md-12">
+                <h4>{{mockList.length}} total</h4>
                 <table class="table table-striped table-bordered" id="theTable">
                     <thead>
                     <tr>
@@ -18,12 +19,13 @@
                     </tr>
                     </thead>
                     <tbody id="theTbody" class="nowrap">
-                        <tr ng-repeat="item in mockList">
+                        <tr ng-repeat="item in filteredMockList">
                             <td>{{item.name}}</td>
                             <td>{{item.number}}</td>
                         </tr>
                     </tbody>
                 </table>
+                <pagination total-items="totalItems" max-size = "maxSize" ng-model="currentPage" boundary-links="true"></pagination>
             </div>
         </div>
     </div>
