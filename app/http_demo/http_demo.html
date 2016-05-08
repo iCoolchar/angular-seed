@@ -16,12 +16,19 @@
                     <tr>
                         <th>名称</th>
                         <th>数字</th>
+                        <th>数字</th>
+                        <th>CNT</th>
                     </tr>
                     </thead>
                     <tbody id="theTbody" class="nowrap">
-                        <tr ng-repeat="item in filteredMockList">
-                            <td>{{item.name}}</td>
+                        <tr ng-repeat-start="item in filteredMockList">
+                            <td rowspan="2">{{item.name}}</td>
                             <td>{{item.number}}</td>
+                            <td>{{item.number}}</td>
+                            <td rowspan="2">{{item.number}}</td>
+                        </tr>
+                        <tr ng-repeat-end="item in filteredMockList">
+                            <td colspan="2">{{item.cnt}}</td>
                         </tr>
                     </tbody>
                 </table>

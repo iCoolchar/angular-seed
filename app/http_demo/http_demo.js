@@ -35,19 +35,23 @@ angular.module('myApp.http_demo', ['ngRoute','ngNotify'])
     $scope.mockList = [
         {
             "name": "item1",
-            "number": "value1"
+            "number": "value1",
+            "cnt": "cnt1"
         },
         {
             "name": "item2",
-            "number": "value2"
+            "number": "value2",
+            "cnt": "cnt2"
         },
         {
             "name": "item3",
-            "number": "value3"
+            "number": "value3",
+            "cnt": "cnt3"
         },
         {
             "name": "item4",
-            "number": "value4"
+            "number": "value4",
+            "cnt": "cnt4"
         },
         {
             "name": "item5",
